@@ -35,7 +35,7 @@ export default function Section({
       </button>
 
       {isOpen && (
-        <div className="mt-4 pl-4 border-l-2 border-slate-200">
+        <div className="mt-4">
           {children}
         </div>
       )}
