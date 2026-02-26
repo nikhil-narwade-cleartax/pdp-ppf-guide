@@ -86,12 +86,12 @@ export default function SearchModal({ isOpen, onClose, onNavigate }) {
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm z-0"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-xl bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
+      <div className="relative z-10 w-full max-w-xl mx-4 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
         {/* Search Input */}
         <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-200">
           <Search className="w-5 h-5 text-slate-400" />
@@ -126,11 +126,12 @@ export default function SearchModal({ isOpen, onClose, onNavigate }) {
                 return (
                   <li key={result.id}>
                     <button
+                      type="button"
                       onClick={() => {
                         onNavigate(result.id);
                         onClose();
                       }}
-                      className="w-full flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors text-left"
+                      className="w-full flex items-center gap-3 px-4 py-3 hover:bg-slate-100 transition-colors text-left cursor-pointer"
                     >
                       <div className="w-8 h-8 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon className="w-4 h-4 text-slate-500" />
