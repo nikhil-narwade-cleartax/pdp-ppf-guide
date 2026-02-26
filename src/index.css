@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors;
+  }
+
+  .sidebar-link.active {
+    @apply bg-blue-50 text-blue-700 font-semibold;
+  }
+
+  .test-card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .callout {
+    @apply rounded-lg p-4 border-l-4;
+  }
+
+  .callout-warning {
+    @apply bg-amber-50 border-amber-500 text-amber-900;
+  }
+
+  .callout-note {
+    @apply bg-blue-50 border-blue-500 text-blue-900;
+  }
+
+  .callout-key {
+    @apply bg-emerald-50 border-emerald-500 text-emerald-900;
+  }
+
+  .callout-critical {
+    @apply bg-red-50 border-red-500 text-red-900;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  }
+
+  .badge-api {
+    @apply bg-violet-100 text-violet-800;
+  }
+
+  .badge-edi {
+    @apply bg-orange-100 text-orange-800;
+  }
+
+  .badge-directory {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-einvoicing {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-ereporting {
+    @apply bg-purple-100 text-purple-800;
+  }
+}
